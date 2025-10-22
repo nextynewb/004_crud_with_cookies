@@ -5,19 +5,21 @@ USE example_4_db;
 CREATE TABLE customer (
     id INT PRIMARY KEY,
     name VARCHAR(255),
-    email VARCHAR(255),
+    email VARCHAR(255) UNIQUE,
     phone VARCHAR(255), 
-    username VARCHAR(255),
+    username VARCHAR(255) UNIQUE,
     password VARCHAR(255)
 );
 
-INSERT INTO customer (id, name, email, phone, username, password) VALUES (1, 'John Doe', 'john.doe@example.com', '1234567890', 'john_doe', 'password'); 
-INSERT INTO customer (id, name, email, phone, username, password) VALUES (2, 'Jane Doe', 'jane.doe@example.com', '0987654321', 'jane_doe', 'password');
-INSERT INTO customer (id, name, email, phone, username, password) VALUES (3, 'Jim Doe', 'jim.doe@example.com', '1111111111', 'jim_doe', 'password');
-INSERT INTO customer (id, name, email, phone, username, password) VALUES (4, 'Jill Doe', 'jill.doe@example.com', '2222222222', 'jill_doe', 'password');
-INSERT INTO customer (id, name, email, phone, username, password) VALUES (5, 'Jack Doe', 'jack.doe@example.com', '3333333333', 'jack_doe', 'password');
-INSERT INTO customer (id, name, email, phone, username, password) VALUES (6, 'Jill Doe', 'jill.doe@example.com', '4444444444', 'jill_doe', 'password');
-INSERT INTO customer (id, name, email, phone, username, password) VALUES (7, 'Jack Doe', 'jack.doe@example.com', '5555555555', 'jack_doe', 'password');
-INSERT INTO customer (id, name, email, phone, username, password) VALUES (8, 'Jill Doe', 'jill.doe@example.com', '6666666666', 'jill_doe', 'password');
-INSERT INTO customer (id, name, email, phone, username, password) VALUES (9, 'Jack Doe', 'jack.doe@example.com', '7777777777', 'jack_doe', 'password');
-INSERT INTO customer (id, name, email, phone, username, password) VALUES (10, 'Jill Doe', 'jill.doe@example.com', '8888888888', 'jill_doe', 'password');    
+-- Insert sample Malaysian customer data
+INSERT INTO customer (id, name, email, phone, username, password) VALUES 
+(1, 'Ahmad bin Abdullah', 'ahmad@example.com', '012-3456789', 'ahmad123', 'password123'),
+(2, 'Siti Nurhaliza', 'siti@example.com', '019-8765432', 'siti_nur', 'secure456'),
+(3, 'Tan Wei Ming', 'tanwm@example.com', '016-7894561', 'weiming', 'ming789'),
+(4, 'Rajesh Kumar', 'rajesh@example.com', '013-5557777', 'rajeshk', 'kumar123'),
+(5, 'Nurul Huda', 'nurul@example.com', '014-9998888', 'nurul_h', 'huda456'),
+(6, 'Lee Chong Wei', 'leecw@example.com', '017-1112222', 'chongwei', 'badminton789'),
+(7, 'Kavitha Krishnan', 'kavitha@example.com', '011-3334444', 'kavitha_k', 'krish123'),
+(8, 'Muhammad Zikri', 'zikri@example.com', '018-6667777', 'zikri_m', 'zikri456'),
+(9, 'Wong Mei Ling', 'meiling@example.com', '019-2223333', 'meiling', 'wong789'),
+(10, 'Amir Hamzah', 'amir@example.com', '012-8889999', 'amir_h', 'hamzah123');

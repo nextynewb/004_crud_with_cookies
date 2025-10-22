@@ -1,16 +1,8 @@
 <?php
 
 require 'conn.php';
+$id = $_GET['id'];
 
-if(!isset($_COOKIE['user_id'])) {
-    header("Location: login.php");
-    exit();
-}
-
-if (!isset($_GET['id'])) {
-    header("Location: index.php");
-    exit();
-}
 
 if ($_POST) {
     $name = isset($_POST['name']) ? $_POST['name'] : '';
@@ -24,10 +16,7 @@ if ($_POST) {
 }
 
 $user = getUserById($id);
-if (!$user) {
-    header("Location: index.php");
-    exit();
-}
+
 
 ?>
 
